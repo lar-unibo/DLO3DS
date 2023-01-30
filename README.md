@@ -8,10 +8,11 @@ libfranka
 franka-ros
 ```
 
-## FASTDLO
+## FASTDLO ([https://github.com/lar-unibo/fastdlo](https://github.com/lar-unibo/fastdlo))
 
 
 Download the [trained models](https://drive.google.com/file/d/1OVcro53E_8oJxRPHqGy619rBNoCD3rzT/view?usp=sharing) and place them in the ```checkpoints``` folder inside ```fastdlo_core```.
+
 
 
 ## Simulation
