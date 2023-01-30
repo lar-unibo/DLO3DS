@@ -1,0 +1,9 @@
+*.ckpt
+*.pth
+estimations/*
+*.obj
+*.blend
+*.mtl
+*.png
+*.jpg
+*.jpeg

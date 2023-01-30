@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<launch>
+
+      <arg name="output_path" default="estimations" />
+      <arg name="obj_file" default="dlo_0_r_50.obj" />
+
+      <arg name="num_points" default="20" />
+      <arg name="overlap_scans" default="0.5" />
+      <arg name="num_views" default="3" />
+      
+      <!-- OPTIMIZATION PARAMS -->
+      <arg name="opt_delta_z" default="0.15" />
+      <arg name="opt_offset" default="100" />
+      <arg name="opt_min_z" default="0.15" /> 
+
+      <!-- FRAMES -->
+      <arg name="camera_frame" default="gripper_camera" />
+      <arg name="world_frame" default="panda_link0" />
+
+      <!-- CAMERA PARAMS -->
+      <arg name="camera_matrix" default="525.08783, 0.0, 340.829224, 0.0, 524.478088, 255.226487, 0.0, 0.0, 1.0" />
+      <arg name="distort_vec" default="-0.011761, -0.069188, -0.000052,  0.000897, 0.154654"/>
+      <arg name="camera_height" default="480" />
+      <arg name="camera_width" default="640" />
+
+      <!-- DLO3DS -->
+      <node name="dlo3ds" pkg="dlo3ds" type="dlo3ds_pipeline.py" output="screen" >
+
+            <param name="camera_frame" value="$(arg camera_frame)" />
+            <param name="world_frame" value="$(arg world_frame)" />
+
+            <param name="camera_matrix" value="$(arg camera_matrix)" />
+            <param name="distort_vec" value="$(arg distort_vec)"/>
+            <param name="camera_height" value="$(arg camera_height)" />
+            <param name="camera_width" value="$(arg camera_width)" />
+
+            <param name="opt_delta_z" value="$(arg opt_delta_z)" />
+            <param name="opt_offset" value="$(arg opt_offset)" />
+            <param name="opt_min_z" value="$(arg opt_min_z)" />
+            <param name="overlap_scans" value="$(arg overlap_scans)" />
+
+            <param name="num_points" value="$(arg num_points)" />
+            <param name="num_views" value="$(arg num_views)" />
+
+            <param name="output_path" value="$(arg output_path)" />
+            <param name="obj_file" value="$(arg obj_file)" />
+
+      </node>
+</launch>
