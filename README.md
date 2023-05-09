@@ -1,6 +1,8 @@
 
 # Deformable Linear Objects 3D Shape Estimation and Tracking From Multiple 2D Views
 
+IEEE Robotics and Automation Letters (RA-L)
+
 ### Abstract
 This paper presents DLO3DS , an approach for the 3D shapes estimation and tracking of Deformable Linear Objects (DLOs) such as cables, wires or plastic hoses, using a cheap and compact 2D vision sensor mounted on the robot end-effector. DLO3DS can be applied in all those scenarios in which the perception and manipulation of DLO-like structures are needed, such as in the case of switchgear cabling, wiring harness manufacturing and assembly in the automotive and aerospace industries, or production of hoses for medical applications. The developed procedure is based on a pipeline that first processes the images coming from the 2D camera extracting key topological points along the DLOs. These points are then used to model each DLO with a B-spline curve. Finally, the set of splines obtained from all the images is matched by exploiting a multi-view stereo-based algorithm. DLO3DS is validated both on a real scenario and on simulated data obtained by exploiting a rendering engine for photo-realistic images. In this way, reliable ground-truth data are retrieved and utilized for assessing the estimation error achievable by DLO3DS , which on the employed test set is characterized by a mean reconstruction error of 0.82 mm.
 
